@@ -1,0 +1,2 @@
+INSERT INTO FUNKO (ID, NAME, CATEGORY, PRICE, CANTIDAD)
+VALUES (1, 'Captain America', 'Marvel', 10.99, 10);

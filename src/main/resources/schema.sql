@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS FUNKO (
+  id BIGINT PRIMARY KEY NOT NULL,
+  name VARCHAR(255) NOT NULL,
+    price DECIMAL(10, 2),
+    cantidad INT DEFAULT 0,
+    image VARCHAR(255),
+    categoria VARCHAR(255)
+);
