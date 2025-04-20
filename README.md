@@ -1,28 +1,33 @@
-# 🧸 API de Funkos - Proyecto Simple con NestJS
+# 🧸 API de Funkos - Spring Boot
 
-Este es un proyecto backend sencillo desarrollado con **NestJS** que ofrece una **API REST** para gestionar productos de tipo **Funko Pop!**. Ideal para aprender o practicar la creación de APIs con Nest y TypeScript.
-
-La API permite registrar nuevos funkos, actualizarlos, eliminarlos y listarlos por categorías o disponibilidad.
+Este es un proyecto backend sencillo desarrollado con **Java y Spring Boot**, que proporciona una **API REST** para la gestión de productos Funko Pop. La aplicación permite registrar, listar, actualizar y eliminar funkos desde una base de datos relacional.
 
 ---
 
-## 📦 Funcionalidades principales
+## 🎯 Objetivo del Proyecto
 
-- CRUD completo de Funkos
-- Filtros por categoría, disponibilidad o nombre
-- Validaciones con DTOs y Pipes
-- Documentación con Swagger
-- Estructura modular (estilo NestJS)
+El propósito de esta API es practicar la construcción de servicios REST usando Spring Boot, incluyendo controladores, servicios, repositorios y entidades bien estructuradas. Es ideal como base para un ecommerce, sistema de inventario o aplicación educativa.
+
+---
+
+## 📦 Funcionalidades
+
+- CRUD completo de funkos
+- Filtros por nombre, categoría y disponibilidad (si aplica)
+- Validaciones con Bean Validation
+- Uso de capas: Controller, Service, Repository
+- Documentación con Swagger (opcional)
+- Estructura basada en buenas prácticas de Spring Boot
 
 ---
 
 ## 🛠️ Tecnologías utilizadas
 
-- **Lenguaje**: TypeScript
-- **Framework**: NestJS
-- **ORM**: TypeORM o Prisma (dependiendo del setup)
-- **Base de datos**: PostgreSQL / SQLite
-- **Documentación**: Swagger (OpenAPI)
+- **Lenguaje**: Java 17+
+- **Framework**: Spring Boot
+- **Persistencia**: Spring Data JPA
+- **Base de datos**: H2 (modo desarrollo) o PostgreSQL/MySQL
+- **Documentación**: SpringDoc / Swagger UI (si está habilitado)
 
 ---
 
@@ -30,49 +35,57 @@ La API permite registrar nuevos funkos, actualizarlos, eliminarlos y listarlos p
 
 ### Requisitos
 
-- Node.js
-- npm o yarn
-- Base de datos (PostgreSQL o SQLite)
+- Java JDK 17+
+- Maven o Gradle
+- IDE (IntelliJ IDEA, Eclipse, etc.)
 
 ### Pasos
 
+1. Clonar el repositorio:
 ```bash
-git clone https://github.com/tuusuario/api-funkos.git
-cd api-funkos
-npm install
-npm run start:dev
+git clone https://github.com/tuusuario/funkos-api-spring.git
+cd funkos-api-spring
 ```
 
-Accede a la documentación Swagger:  
-[http://localhost:3000/api](http://localhost:3000/api)
+2. Configurar `application.properties` o `application.yml` con tu base de datos.
+
+3. Ejecutar el proyecto:
+```bash
+./mvnw spring-boot:run
+```
+
+4. Accede a la API en:
+```
+http://localhost:8080/api/funkos
+```
+
+5. Si usas Swagger:
+```
+http://localhost:8080/swagger-ui.html
+```
 
 ---
 
-## 🧪 Endpoints principales
+## 🔗 Endpoints principales
 
-| Método | Endpoint         | Descripción                |
-|--------|------------------|----------------------------|
-| GET    | /funkos          | Lista todos los funkos     |
-| GET    | /funkos/:id      | Detalle de un funko        |
-| POST   | /funkos          | Crear nuevo funko          |
-| PUT    | /funkos/:id      | Actualizar funko existente |
-| DELETE | /funkos/:id      | Eliminar funko             |
-
----
-
-## 🎯 Objetivo
-
-Este proyecto fue creado como ejercicio para practicar la construcción de una API sencilla con buenas prácticas, modularización y documentación automática.
+| Método | Ruta              | Descripción                |
+|--------|-------------------|----------------------------|
+| GET    | /api/funkos       | Lista todos los funkos     |
+| GET    | /api/funkos/{id}  | Detalle de un funko        |
+| POST   | /api/funkos       | Crear nuevo funko          |
+| PUT    | /api/funkos/{id}  | Actualizar funko existente |
+| DELETE | /api/funkos/{id}  | Eliminar funko             |
 
 ---
 
 ## 🤝 Autor
 
 **Kevin Bermúdez**  
-_Técnico Superior en Desarrollo de Aplicaciones Web_
+_Técnico Superior en Desarrollo de Aplicaciones Web_  
+💡 Proyecto backend educativo con Spring Boot
 
 ---
 
 ## 📄 Licencia
 
-Este proyecto está disponible bajo la licencia MIT. Puedes usarlo como base para tu propio ecommerce o práctica de APIs.
+Este proyecto está bajo licencia MIT. Libre para usar, modificar y compartir.
